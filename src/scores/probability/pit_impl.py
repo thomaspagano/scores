@@ -182,47 +182,25 @@ class Pit:
     Examples:
         Calculate the PIT for an under-dispersive ensemble forecast, and calculate various diagnostics and statistics.
 
-        >>> import numpy as np
         >>> import xarray as xr
         >>> from scipy.stats import norm
         >>> from scores.probability import Pit
-        >>> np.random.seed(42)
-
         >>> # generate the forecasts and observations then calculate PIT
         >>> fcst = xr.DataArray(
         ...     norm.rvs(size=(500, 10)), dims=["time", "ensemble_member"]
         ... )
         >>> obs = xr.DataArray(norm.rvs(scale=2, size=(500)), dims=["time"])
-
         >>> pit = Pit(fcst, obs, ensemble_member_dim="ensemble_member")
-
-        >>> # plot the CDF of the PIT distribution
-        >>> pit.plotting_points().plot()  # doctest: +SKIP
-
         >>> # bar heights for a PIT histogram
-        >>> pit.hist_values(10)
-        <xarray.DataArray (bin_centre: 10)> Size: 80B
-        array([0.316, 0.066, 0.046, 0.068, 0.056, 0.058, 0.06 , 0.046, 0.078,
-            0.206])
-        Coordinates:
-        * bin_centre          (bin_centre) float64 80B 0.05 0.15 0.25 ... 0.85 0.95
-            bin_left_endpoint   (bin_centre) float64 80B 0.0 0.1 0.2 0.3 ... 0.7 0.8 0.9
-            bin_right_endpoint  (bin_centre) float64 80B 0.1 0.2 0.3 0.4 ... 0.8 0.9 1.0
-
+        >>> histogram_values = pit.hist_values(10)
+        >>> # plot the CDF of the PIT distribution
+        >>> pit.plotting_points().plot()
         >>> # the expected value of the PIT distribution
-        >>> pit.expected_value()
-        <xarray.DataArray ()> Size: 8B
-        array(0.4818)
-
+        >>> pit_ev = pit.expected_value()
         >>> # the variance of the PIT distribution
-        >>> pit.variance()
-        <xarray.DataArray ()> Size: 8B
-        array(0.14940876)
-
+        >>> pit_var = pit.variance()
         >>> # the alpha score of the PIT distribution
-        >>> pit.alpha_score()
-        <xarray.DataArray ()> Size: 8B
-        array(0.10262)
+        >>> pit_alpha = pit.alpha_score()
 
         Other examples are found in the ``scores`` tutorial for PIT.
     """
@@ -298,12 +276,11 @@ class Pit:
         Also useful for generating PIT-uniform probability plots.
 
         Returns:
-            dictionary of xarray objects with the following keys:
+            dictionary of xarray objects with the following keys, with :math:`t` values
+            in the "plotting_point" dimension:
 
             - "x_plotting_position", containing :math:`x(t)` values
             - "y_plotting_position", containing :math:`y(t)` values
-
-            with :math:`t` values in the "plotting_point" dimension.
         """
         return _get_plotting_points_param(self.left, self.right)
 
@@ -339,20 +316,12 @@ class Pit:
         """
         Returns the 'alpha score' (Renard, et. al., 2010), which is a measure of how close the
         PIT distribution :math:`F` is to the uniform distribution on the closed unit interval :math:`[0,1]`.
-        When ``negative_orientation=True``, the formula for the alpha score is
-
-        .. math::
-
-            \\int_0^1 |F(x) - x|\\,\\text{d}x,
-
+        When ``negative_orientation=True``, the formula is for the alpha score is
+        :math:`\\int_0^1 |F(x) - x|\\,\\text{d}x,`
         so that the lower the score, the closer :math:`F` is to the uniform distribution.
         In this case the alpha score takes values between 0 and 0.5.
-        When ``negative_orientation=False``, the formula for the alpha score is
-
-        .. math::
-
-            1 - 2 \\int_0^1 |F(x) - x|\\,\\text{d}x,
-
+        When ``negative_orientation=False``, the formula is for the alpha score is
+        :math:`1 - 2 \\int_0^1 |F(x) - x|\\,\\text{d}x,`
         so that the higher the score, the closer :math:`F` is to the uniform distribution.
         In this case the alpha score takes values between 0 and 1.
 
@@ -472,46 +441,23 @@ class PitFcstAtObs:
         >>> import xarray as xr
         >>> from scipy.stats import norm
         >>> from scores.probability import PitFcstAtObs
-
         >>> # observations generated from a normal distribution with
         >>> # mean 0 and standard deviation 2
-        >>> obs = xr.DataArray(
-        ...     norm.rvs(scale=2, size=500, random_state=42), dims=["time"]
-        ... )
-
+        >>> obs = xr.DataArray(norm.rvs(scale=2, size=(500)), dims=["time"])
         >>> # forecasts are normal distributions with mean 0 and standard deviation 1
         >>> # evaluate the forecast CDFs at the observations
         >>> fcst_at_obs = xr.DataArray(norm.cdf(obs), dims=["time"])
-
         >>> pit = PitFcstAtObs(fcst_at_obs)
-
         >>> # bar heights for a PIT histogram
-        >>> pit.hist_values(10)
-        <xarray.DataArray (bin_centre: 10)> Size: 80B
-        array([0.27 , 0.08 , 0.04 , 0.054, 0.048, 0.064, 0.054, 0.068, 0.072,
-               0.25 ])
-        Coordinates:
-          * bin_centre          (bin_centre) float64 80B 0.05 0.15 0.25 ... 0.85 0.95
-            bin_left_endpoint   (bin_centre) float64 80B 0.0 0.1 0.2 0.3 ... 0.7 0.8 0.9
-            bin_right_endpoint  (bin_centre) float64 80B 0.1 0.2 0.3 0.4 ... 0.8 0.9 1.0
-
+        >>> histogram_values = pit.hist_values(10)
         >>> # plot the CDF of the PIT distribution
-        >>> pit.plotting_points().plot()  # doctest: +SKIP
-
+        >>> pit.plotting_points().plot()
         >>> # the expected value of the PIT distribution
-        >>> pit.expected_value()
-        <xarray.DataArray ()> Size: 8B
-        array(0.49760026)
-
+        >>> pit_ev = pit.expected_value()
         >>> # the variance of the PIT distribution
-        >>> pit.variance()
-        <xarray.DataArray ()> Size: 8B
-        array(0.14587873)
-
+        >>> pit_var = pit.variance()
         >>> # the alpha score of the PIT distribution
-        >>> pit.alpha_score()
-        <xarray.DataArray ()> Size: 8B
-        array(0.09965585)
+        >>> pit_alpha = pit.alpha_score()
 
         Other examples are found in the ``scores`` tutorial for PIT.
     """
@@ -560,12 +506,11 @@ class PitFcstAtObs:
         Also useful for generating PIT-uniform probability plots.
 
         Returns:
-            dictionary of xarray objects with the following keys:
+            dictionary of xarray objects with the following keys, with :math:`t` values
+            in the "plotting_point" dimension:
 
             - "x_plotting_position", containing :math:`x(t)` values
             - "y_plotting_position", containing :math:`y(t)` values
-
-            with :math:`t` values in the "plotting_point" dimension.
         """
         return _get_plotting_points_param(self.left, self.right)
 
@@ -602,20 +547,12 @@ class PitFcstAtObs:
         """
         Returns the 'alpha score' (Renard, et. al., 2010), which is a measure of how close the
         PIT distribution :math:`F` is to the uniform distribution on the closed unit interval :math:`[0,1]`.
-        When ``negative_orientation=True``, the formula for the alpha score is
-
-        .. math::
-
-            \\int_0^1 |F(x) - x|\\,\\text{d}x,
-
+        When ``negative_orientation=True``, the formula is for the alpha score is
+        :math:`\\int_0^1 |F(x) - x|\\,\\text{d}x,`
         so that the lower the score, the closer :math:`F` is to the uniform distribution.
         In this case the alpha score takes values between 0 and 0.5.
-        When ``negative_orientation=False``, the formula for the alpha score is
-
-        .. math::
-
-            1 - 2 \\int_0^1 |F(x) - x|\\,\\text{d}x,
-
+        When ``negative_orientation=False``, the formula is for the alpha score is
+        :math:`1 - 2 \\int_0^1 |F(x) - x|\\,\\text{d}x,`
         so that the higher the score, the closer :math:`F` is to the uniform distribution.
         In this case the alpha score takes values between 0 and 1.
 

@@ -135,37 +135,15 @@ def isotonic_fit(  # pylint: disable=too-many-locals, too-many-arguments
         the return dictionary small. The forecast counts is also included, so users can it to
         create forecast histogram (usually displayed in the reliability diagrams).
 
-    References
-        - de Leeuw, Hornik and Mair. "Isotone Optimization in R: Pool-Adjacent-Violators Algorithm (PAVA)
-          and Active Set Methods", Journal of Statistical Software, 2009.
-        - Dimitriadis, Gneiting and Jordan. "Stable reliability diagrams for probabilistic classifiers",
-          PNAS, Vol. 118 No. 8, 2020. Available at https://www.pnas.org/doi/10.1073/pnas.2016191118
-        - Jordan, Mühlemann, and Ziegel. "Optimal solutions to the isotonic regression problem",
-          2020 (version 2), available on arxiv at https://arxiv.org/abs/1904.04761
-
-    Examples:
-        >>> import xarray as xr
-        >>> from scores.processing import isotonic_fit
-
-        >>> times = ["2024-01-01", "2024-01-02", "2024-01-03"]
-
-        >>> fcst = xr.DataArray(
-        ...     [1.2, 2.5, 4.1], coords={"time": times}, dims="time"
-        ... )
-
-        >>> obs = xr.DataArray([1.0, 3.0, 4.5], coords={"time": times}, dims="time")
-
-        >>> result = isotonic_fit(fcst, obs)
-
-        >>> result["fcst_sorted"]
-        array([1.2, 2.5, 4.1])
-
-        >>> result["fcst_counts"]
-        array([1, 1, 1])
-
-        >>> result["regression_values"]
-        array([1. , 3. , 4.5])
-
+    References:
+        - De Leeuw, J., Hornik, K., & Mair, P. (2010). Isotone optimization in R: pool-adjacent-violators
+          algorithm (PAVA) and active set methods. Journal of statistical software, 32, 1–24.
+          https://doi.org/10.18637/jss.v032.i05
+        - Dimitriadis, T., Gneiting, T., & Jordan, A. I. (2021). Stable reliability diagrams for probabilistic
+          classifiers. Proceedings of the National Academy of Sciences, 118(8), e2016191118.
+          https://www.pnas.org/doi/10.1073/pnas.2016191118
+        - Jordan, A. I., Mühlemann, A., & Ziegel, J. F. (2020). Optimal solutions to the isotonic regression
+          problem. arXiv preprint arXiv:1904.04761v2. https://doi.org/10.48550/arXiv.1904.04761
     """
 
     if isinstance(fcst, xr.DataArray):

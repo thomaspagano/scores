@@ -271,7 +271,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#ACC
+            - https://jwgfvr.github.io/forecastverification/index.html#ACC
 
         Examples:
             >>> import xarray as xr
@@ -372,10 +372,10 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False positives" is the same as "false alarms".
 
         References:
-            Hogan, R. J., & Mason, I. B. (2011). Deterministic forecasts of binary events.
-            In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification:
-            A practitioner's guide in atmospheric science (2nd ed.,
-            pp. 39–51). https://doi.org/10.1002/9781119960003.ch3
+            - Hogan, R. J., & Mason, I. B. (2011). Deterministic forecasts of binary events.
+              In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification:
+              A practitioner's guide in atmospheric science (2nd ed.,
+              pp. 39–51). https://doi.org/10.1002/9781119960003.ch3
 
         Examples:
             >>> import xarray as xr
@@ -426,7 +426,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#ACC
+            - https://jwgfvr.github.io/forecastverification/index.html#ACC
 
         Examples:
             >>> import xarray as xr
@@ -477,7 +477,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#BIAS
+            - https://jwgfvr.github.io/forecastverification/index.html#BIAS
 
         Examples:
             >>> import xarray as xr
@@ -534,7 +534,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#BIAS
+            - https://jwgfvr.github.io/forecastverification/index.html#BIAS
 
         Examples:
             >>> import xarray as xr
@@ -586,7 +586,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POD
+            - https://jwgfvr.github.io/forecastverification/index.html#POD
 
         Examples:
             >>> import xarray as xr
@@ -636,7 +636,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses"
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POD
+            - https://jwgfvr.github.io/forecastverification/index.html#POD
 
         Examples:
             >>> import xarray as xr
@@ -693,7 +693,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POD
+            - https://jwgfvr.github.io/forecastverification/index.html#POD
 
         Examples:
             >>> import xarray as xr
@@ -743,7 +743,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True positives" is the same as "hits".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#FAR
+            - https://jwgfvr.github.io/forecastverification/index.html#FAR
 
         Examples:
             >>> import xarray as xr
@@ -797,7 +797,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POFD
+            - https://jwgfvr.github.io/forecastverification/index.html#POFD
 
         Examples:
             >>> import xarray as xr
@@ -851,7 +851,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POFD
+            - https://jwgfvr.github.io/forecastverification/index.html#POFD
 
         Examples:
             >>> import xarray as xr
@@ -901,7 +901,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False positives" is the same as "false alarms".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#SR
+            - https://jwgfvr.github.io/forecastverification/index.html#SR
 
         Examples:
             >>> import xarray as xr
@@ -955,7 +955,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#CSI
+            - https://jwgfvr.github.io/forecastverification/index.html#CSI
 
         Examples:
             >>> import xarray as xr
@@ -1011,7 +1011,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives"
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#CSI
+            - https://jwgfvr.github.io/forecastverification/index.html#CSI
 
         Examples:
             >>> import xarray as xr
@@ -1123,7 +1123,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#HK
+            - https://jwgfvr.github.io/forecastverification/index.html#HK
 
         Examples:
             >>> import xarray as xr
@@ -1178,7 +1178,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#HK
+            - https://jwgfvr.github.io/forecastverification/index.html#HK
 
         Examples:
             >>> import xarray as xr
@@ -1349,7 +1349,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False positives" is the same as "false alarms".
 
         References:
-            https://en.wikipedia.org/wiki/Sensitivity_and_specificity
+            - https://en.wikipedia.org/wiki/Sensitivity_and_specificity
 
         Examples:
             >>> import xarray as xr

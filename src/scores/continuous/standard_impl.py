@@ -655,6 +655,7 @@ def kge(
     preserve_dims: Optional[FlexibleDimensionTypes] = None,
     scaling_factors: Optional[Union[list[float], np.ndarray]] = None,
     include_components: Optional[bool] = False,
+    method: str = "2009",
 ) -> XarrayLike:
     # pylint: disable=too-many-locals
     """
@@ -754,6 +755,8 @@ def kge(
         raise TypeError("kge: fcst must be an xarray.DataArray")
     if not isinstance(obs, xr.DataArray):
         raise TypeError("kge: obs must be an xarray.DataArray")
+    if method not in {"2009", "2012"}:
+        raise ValueError("kge: method must be either '2009' or '2012'")
     if scaling_factors is not None:
         if isinstance(scaling_factors, (list, np.ndarray)):
             # Check if the input has exactly 3 elements
@@ -784,17 +787,23 @@ def kge(
     mu_obs = obs.mean(reduce_dims)
     beta = mu_fcst / mu_obs
 
+    if method == "2012":
+        variability_term = (sigma_fcst / mu_fcst) / (sigma_obs / mu_obs)
+        variability_name = "gamma"
+    else:
+        variability_term = alpha
+        variability_name = "alpha"
+
     # compute Euclidian distance from the ideal point in the scaled space
-    ed_s = np.sqrt((s_rho * (rho - 1)) ** 2 + (s_alpha * (alpha - 1)) ** 2 + (s_beta * (beta - 1)) ** 2)
+    ed_s = np.sqrt((s_rho * (rho - 1)) ** 2 + (s_alpha * (variability_term - 1)) ** 2 + (s_beta * (beta - 1)) ** 2)
     kge_s = 1 - ed_s
     if include_components:
         # Create dataset of all components
-        kge_s = xr.Dataset(
-            {
-                "kge": kge_s,
-                "rho": rho,
-                "alpha": alpha,
-                "beta": beta,
-            }
-        )
+        components = {
+            "kge": kge_s,
+            "rho": rho,
+            variability_name: variability_term,
+            "beta": beta,
+        }
+        kge_s = xr.Dataset(components)
     return kge_s

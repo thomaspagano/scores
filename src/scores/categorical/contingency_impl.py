@@ -271,7 +271,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#ACC
+            - https://jwgfvr.github.io/forecastverification/index.html#ACC
 
         Examples:
             >>> import xarray as xr
@@ -321,9 +321,9 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            Hogan, R. J. & Mason, I. B. (2011). Deterministic forecasts of binary events.
-            In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification: A practitioner's guide in atmospheric
-            science (2nd ed., pp. 39-51). https://doi.org/10.1002/9781119960003.ch3
+            - Hogan, R. J., & Mason, I. B. (2011). Deterministic forecasts of binary events.
+              In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification: A practitioner's guide in atmospheric
+              science (2nd ed., pp. 39–51). https://doi.org/10.1002/9781119960003.ch3
 
         Examples:
             >>> import xarray as xr
@@ -372,10 +372,10 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False positives" is the same as "false alarms".
 
         References:
-            Hogan, R. J. & Mason, I. B. (2011). Deterministic forecasts of binary events.
-            In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification:
-            A practitioner's guide in atmospheric science (2nd ed.,
-            pp. 39-51). https://doi.org/10.1002/9781119960003.ch3
+            - Hogan, R. J., & Mason, I. B. (2011). Deterministic forecasts of binary events.
+              In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification:
+              A practitioner's guide in atmospheric science (2nd ed.,
+              pp. 39–51). https://doi.org/10.1002/9781119960003.ch3
 
         Examples:
             >>> import xarray as xr
@@ -426,7 +426,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#ACC
+            - https://jwgfvr.github.io/forecastverification/index.html#ACC
 
         Examples:
             >>> import xarray as xr
@@ -477,7 +477,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#BIAS
+            - https://jwgfvr.github.io/forecastverification/index.html#BIAS
 
         Examples:
             >>> import xarray as xr
@@ -534,7 +534,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#BIAS
+            - https://jwgfvr.github.io/forecastverification/index.html#BIAS
 
         Examples:
             >>> import xarray as xr
@@ -586,7 +586,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POD
+            - https://jwgfvr.github.io/forecastverification/index.html#POD
 
         Examples:
             >>> import xarray as xr
@@ -636,7 +636,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses"
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POD
+            - https://jwgfvr.github.io/forecastverification/index.html#POD
 
         Examples:
             >>> import xarray as xr
@@ -693,7 +693,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False negatives" is the same as "misses".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POD
+            - https://jwgfvr.github.io/forecastverification/index.html#POD
 
         Examples:
             >>> import xarray as xr
@@ -743,7 +743,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True positives" is the same as "hits".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#FAR
+            - https://jwgfvr.github.io/forecastverification/index.html#FAR
 
         Examples:
             >>> import xarray as xr
@@ -797,7 +797,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POFD
+            - https://jwgfvr.github.io/forecastverification/index.html#POFD
 
         Examples:
             >>> import xarray as xr
@@ -851,7 +851,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#POFD
+            - https://jwgfvr.github.io/forecastverification/index.html#POFD
 
         Examples:
             >>> import xarray as xr
@@ -901,7 +901,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False positives" is the same as "false alarms".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#SR
+            - https://jwgfvr.github.io/forecastverification/index.html#SR
 
         Examples:
             >>> import xarray as xr
@@ -955,7 +955,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#CSI
+            - https://jwgfvr.github.io/forecastverification/index.html#CSI
 
         Examples:
             >>> import xarray as xr
@@ -1011,7 +1011,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives"
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#CSI
+            - https://jwgfvr.github.io/forecastverification/index.html#CSI
 
         Examples:
             >>> import xarray as xr
@@ -1066,7 +1066,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         References:
             - https://jwgfvr.github.io/forecastverification/index.html#HK
             - Peirce, C.S., 1884. The numerical measure of the success of predictions.
-              Science, ns-4(93), pp.453-454. https://doi.org/10.1126/science.ns-4.93.453.b
+              Science, ns-4(93), pp.453–454. https://doi.org/10.1126/science.ns-4.93.453.b
 
         Examples:
             >>> import xarray as xr
@@ -1123,7 +1123,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#HK
+            - https://jwgfvr.github.io/forecastverification/index.html#HK
 
         Examples:
             >>> import xarray as xr
@@ -1178,7 +1178,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            https://jwgfvr.github.io/forecastverification/index.html#HK
+            - https://jwgfvr.github.io/forecastverification/index.html#HK
 
         Examples:
             >>> import xarray as xr
@@ -1238,7 +1238,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
               Lazar, J. M., Everaert, K., & Dmochowski, R. R. (2021).
               Foundational statistical principles in medical research:
               Sensitivity, specificity, positive predictive
-              value, and negative predictive value. *Medicina*, 57(5), 503.
+              value, and negative predictive value. Medicina, 57(5), 503.
               https://doi.org/10.3390/medicina57050503
 
         Examples:
@@ -1295,7 +1295,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
               Lazar, J. M., Everaert, K., & Dmochowski, R. R. (2021).
               Foundational statistical principles in medical research:
               Sensitivity, specificity, positive predictive value,
-              and negative predictive value. *Medicina*, 57(5), 503.
+              and negative predictive value. Medicina, 57(5), 503.
               https://doi.org/10.3390/medicina57050503
 
         Examples:
@@ -1349,7 +1349,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False positives" is the same as "false alarms".
 
         References:
-            https://en.wikipedia.org/wiki/Sensitivity_and_specificity
+            - https://en.wikipedia.org/wiki/Sensitivity_and_specificity
 
         Examples:
             >>> import xarray as xr
@@ -1510,7 +1510,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
               Lazar, J. M., Everaert, K., & Dmochowski, R. R. (2021).
               Foundational statistical principles in medical research:
               Sensitivity, specificity, positive predictive value,
-              and negative predictive value. *Medicina*, 57(5), 503.
+              and negative predictive value. Medicina, 57(5), 503.
               https://doi.org/10.3390/medicina57050503
 
         Examples:
@@ -1566,7 +1566,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
              Lazar, J. M., Everaert, K., & Dmochowski, R. R. (2021).
              Foundational statistical principles in medical research: Sensitivity,
              specificity, positive predictive value,
-             and negative predictive value. *Medicina*, 57(5), 503.
+             and negative predictive value. Medicina, 57(5), 503.
              https://doi.org/10.3390/medicina57050503
 
         Examples:
@@ -1682,11 +1682,11 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False positives" is the same as "false alarms"
 
         References:
-            - Gilbert, G.K., 1884. Finley's tornado predictions.
-              American Meteorological Journal, 1(5), pp.166-172.
-            - Hogan, R.J., Ferro, C.A., Jolliffe, I.T. and Stephenson, D.B., 2010.
-              Equitability revisited: Why the “equitable threat score” is not equitable.
-              Weather and Forecasting, 25(2), pp.710-726. https://doi.org/10.1175/2009WAF2222350.1
+            - Gilbert, G. K. (1884). Finley's tornado predictions.
+              American Meteorological Journal, 1(5), 166–172.
+            - Hogan, R. J., Ferro, C. A., Jolliffe, I. T., & Stephenson, D. B. (2010).
+              Equitability revisited: Why the "equitable threat score" is not equitable.
+              Weather and Forecasting, 25(2), 710–726. https://doi.org/10.1175/2009WAF2222350.1
 
         Examples:
             >>> import xarray as xr
@@ -1751,11 +1751,11 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "False positives" is the same as "false alarms".
 
         References:
-            - Gilbert, G.K., 1884. Finley's tornado predictions.
-              American Meteorological Journal, 1(5), pp.166-172.
-            - Hogan, R.J., Ferro, C.A., Jolliffe, I.T. and Stephenson, D.B., 2010.
-              Equitability revisited: Why the “equitable threat score” is not equitable.
-              Weather and Forecasting, 25(2), pp.710-726. https://doi.org/10.1175/2009WAF2222350.1
+            - Gilbert, G. K. (1884). Finley's tornado predictions.
+              American Meteorological Journal, 1(5), 166–172.
+            - Hogan, R. J., Ferro, C. A., Jolliffe, I. T., & Stephenson, D. B. (2010).
+              Equitability revisited: Why the "equitable threat score" is not equitable.
+              Weather and Forecasting, 25(2), 710–726. https://doi.org/10.1175/2009WAF2222350.1
 
         Examples:
             >>> import xarray as xr
@@ -1989,8 +1989,8 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            - Stephenson, D.B., 2000. Use of the “odds ratio” for diagnosing forecast skill.
-              Weather and Forecasting, 15(2), pp.221-232.
+            - Stephenson, D. B. (2000). Use of the "odds ratio" for diagnosing forecast skill.
+              Weather and Forecasting, 15(2), 221–232.
               https://doi.org/10.1175/1520-0434(2000)015%3C0221:UOTORF%3E2.0.CO;2
 
         Examples:
@@ -2056,8 +2056,8 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            - Stephenson, D.B., 2000. Use of the “odds ratio” for diagnosing forecast skill.
-              Weather and Forecasting, 15(2), pp.221-232.
+            - Stephenson, D. B. (2000). Use of the "odds ratio" for diagnosing forecast skill.
+              Weather and Forecasting, 15(2), 221–232.
               https://doi.org/10.1175/1520-0434(2000)015%3C0221:UOTORF%3E2.0.CO;2
 
         Examples:
@@ -2123,8 +2123,8 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - "True negatives" is the same as "correct negatives".
 
         References:
-            - Stephenson, D.B., 2000. Use of the “odds ratio” for diagnosing forecast skill.
-              Weather and Forecasting, 15(2), pp.221-232.
+            - Stephenson, D. B. (2000). Use of the "odds ratio" for diagnosing forecast skill.
+              Weather and Forecasting, 15(2), 221–232.
               https://doi.org/10.1175/1520-0434(2000)015%3C0221:UOTORF%3E2.0.CO;2
 
         Examples:
@@ -2189,9 +2189,9 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
 
 
         References:
-            Ferro, C.A.T. and Stephenson, D.B., 2011. Extremal dependence indices: Improved verification
-            measures for deterministic forecasts of rare binary events. Weather and Forecasting, 26(5), pp.699-713.
-            https://doi.org/10.1175/WAF-D-10-05030.1
+            - Ferro, C. A. T., & Stephenson, D. B. (2011). Extremal dependence indices: Improved
+              verification measures for deterministic forecasts of rare binary events.
+              Weather and Forecasting, 26(5), 699–713. https://doi.org/10.1175/WAF-D-10-05030.1
 
         Examples:
             >>> import xarray as xr

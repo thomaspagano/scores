@@ -133,6 +133,27 @@ def fss_2d(  # pylint: disable=too-many-locals,too-many-arguments
         - Roberts, N. M., & Lean, H. W. (2008). Scale-selective verification of rainfall accumulations
           from high-resolution forecasts of convective events. Monthly Weather Review, 136(1), 78–97,
           https://doi.org/10.1175/2007mwr2123.1.
+
+    Examples:
+        >>> import xarray as xr
+        >>> from scores.spatial import fss_2d
+
+        >>> # Create simple 3x3 forecast and observation fields
+        >>> fcst = xr.DataArray([[0, 1, 2], [1, 2, 3], [2, 3, 4]], dims=["x", "y"])
+
+        >>> obs = xr.DataArray([[0, 0, 1], [1, 2, 2], [2, 2, 3]], dims=["x", "y"])
+
+        >>> # Compute FSS with threshold=1.5 and 2x2 window
+        >>> fss_2d(
+        ...     fcst,
+        ...     obs,
+        ...     event_threshold=1.5,
+        ...     window_size=(2, 2),
+        ...     spatial_dims=("x", "y"),
+        ... )
+        <xarray.DataArray ()> Size: 8B
+        array(0.98461538)
+
     """
     np_thrsh_op = _make_numpy_threshold_operator(threshold_operator)
 
@@ -245,6 +266,26 @@ def fss_2d_binary(  # pylint: disable=too-many-locals,too-many-arguments
     .. seealso::
         :py:func:`scores.spatial.fss_2d` for more details and the continuous
         version. As well as detailed argument definitions.
+
+    Examples:
+        >>> import xarray as xr
+        >>> from scores.spatial import fss_2d_binary
+
+        >>> # Create simple 3x3 forecast and observation fields
+        >>> fcst = xr.DataArray(
+        ...     [[False, True, False], [True, False, True], [False, False, True]],
+        ...     dims=["x", "y"],
+        ... )
+
+        >>> obs = xr.DataArray(
+        ...     [[False, True, True], [False, False, True], [False, True, True]],
+        ...     dims=["x", "y"],
+        ... )
+
+        >>> fss_2d_binary(fcst, obs, window_size=(2, 2), spatial_dims=("x", "y"))
+        <xarray.DataArray ()> Size: 8B
+        array(0.90909091)
+
     """
 
     if check_boolean and not (fcst.dtype == np.bool_ and obs.dtype == np.bool_):
@@ -333,6 +374,17 @@ def fss_2d_single_field(
         - Roberts, N. M., & Lean, H. W. (2008). Scale-selective verification of rainfall accumulations
           from high-resolution forecasts of convective events. Monthly Weather Review, 136(1), 78–97,
           https://doi.org/10.1175/2007mwr2123.1.
+
+    Examples:
+        >>> import numpy as np
+        >>> from scores.spatial import fss_2d_single_field
+
+        >>> fcst = np.array([[0, 1, 2], [1, 2, 3], [2, 3, 4]], dtype=float)
+        >>> obs = np.array([[0, 0, 1], [1, 2, 2], [2, 2, 3]], dtype=float)
+
+        >>> fss_2d_single_field(fcst, obs, event_threshold=1.5, window_size=(2, 2))
+        np.float64(0.9846153846153847)
+
     """
     np_thrsh_op = _make_numpy_threshold_operator(threshold_operator)
 

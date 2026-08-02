@@ -201,7 +201,7 @@ def _block_bootstrap(  # pylint: disable=too-many-locals
         function in blocks using 'block_bootstrap'.
 
     References:
-        - Wilks, D. S. (2019). Statistical methods in the atmospheric sciences. Academic press.
+        - Wilks, D. S. (2020). Statistical methods in the atmospheric sciences. Academic press.
           https://doi.org/10.1016/C2017-0-03921-6
 
     """
@@ -338,7 +338,7 @@ def block_bootstrap(
         - Gilleland, E. (2020). Bootstrap Methods for Statistical Inference. Part I:
           Comparative Forecast Verification for Continuous Variables. Journal of
           Atmospheric and Oceanic Technology, 37(11), 2117–2134. https://doi.org/10.1175/jtech-d-20-0069.1
-        - Wilks, D. S. (2019). Statistical methods in the atmospheric sciences. Academic press.
+        - Wilks, D. S. (2020). Statistical methods in the atmospheric sciences. Academic press.
           https://doi.org/10.1016/C2017-0-03921-6
 
     Examples:

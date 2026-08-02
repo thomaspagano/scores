@@ -80,7 +80,7 @@ def quantile_interval_score(  # pylint: disable=R0914
 
     References:
         - Winkler, R. L. (1972). A decision-theoretic approach to interval estimation. Journal of the American
-          Statistical Association, 67(337), 187. https://doi.org/10.2307/2284720
+          Statistical Association, 67(337), 187–191. https://doi.org/10.2307/2284720
 
     Examples:
         >>> import xarray as xr

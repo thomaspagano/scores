@@ -106,7 +106,7 @@ def diebold_mariano(  # pylint: disable=R0914
 
     References:
         - Diebold, F. X., & Mariano, R. S. (1995). Comparing predictive accuracy. Journal
-          of Business & Economic Statistics, 13(3), 253–265.
+          of Business & Economic Statistics, 13(3), 253–263.
           https://doi.org/10.1080/07350015.1995.10524599
         - Harvey, D., Leybourne, S., & Newbold, P. (1997). Testing the equality of
           prediction mean squared errors. International Journal of Forecasting, 13(2),
@@ -292,7 +292,7 @@ def _dm_test_statistic(diffs: np.ndarray, h: int, *, method: Literal["HG", "HLN"
 
     References:
         - Diebold, F. X., & Mariano, R. S. (1995). Comparing predictive accuracy. Journal
-          of Business & Economic Statistics, 13(3), 253–265.
+          of Business & Economic Statistics, 13(3), 253–263.
           https://doi.org/10.1080/07350015.1995.10524599
         - Harvey, D., Leybourne, S., & Newbold, P. (1997). Testing the equality of
           prediction mean squared errors. International Journal of Forecasting, 13(2),

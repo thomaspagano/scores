@@ -40,6 +40,16 @@ def mse(
     References:
         - https://en.wikipedia.org/wiki/Mean_squared_error
 
+    Examples:
+        >>> from scores.pandas.continuous import mse
+        >>> import pandas as pd
+
+        >>> fcst = pd.Series([1.5, 0.7, 1.4], name="forecast")
+        >>> obs = pd.Series([1.2, 0.8, 1.5], name="observed")
+
+        >>> mse(fcst, obs)
+        np.float64(0.03666666666666669)
+
     """
     return __continuous.mse(fcst, obs, is_angular=is_angular)
 
@@ -76,6 +86,16 @@ def rmse(
     References:
         - https://en.wikipedia.org/wiki/Root-mean-square_deviation
 
+    Examples:
+        >>> from scores.pandas.continuous import rmse
+        >>> import pandas as pd
+
+        >>> fcst = pd.Series([1.5, 0.7, 1.4], name="forecast")
+        >>> obs = pd.Series([1.2, 0.8, 1.5], name="observed")
+
+        >>> rmse(fcst, obs)
+        np.float64(0.1914854215512677)
+
     """
     return __continuous.rmse(fcst, obs, is_angular=is_angular)
 
@@ -111,5 +131,16 @@ def mae(
     References:
         - https://en.wikipedia.org/wiki/Mean_absolute_error
 
+    Examples:
+        >>> from scores.pandas.continuous import mae
+        >>> import pandas as pd
+
+        >>> fcst = pd.Series([1.5, 0.7, 1.4], name="forecast")
+        >>> obs = pd.Series([1.2, 0.8, 1.5], name="observed")
+
+        >>> mae(fcst, obs)
+        np.float64(0.16666666666666674)
+
     """
+
     return __continuous.mae(fcst, obs, is_angular=is_angular)

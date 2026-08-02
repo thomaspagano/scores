@@ -25,7 +25,7 @@ def risk_matrix_score(
     weights: Optional[xr.DataArray] = None,
 ) -> XarrayLike:
     """
-    Calculates the risk matrix score of Taggart & Wilke (2025).
+    Calculates the risk matrix score of Taggart and Wilke (2025).
 
     Let :math:`(S_1, \\ldots,S_m)` denote the tuple of nested severity categories,
     let :math:`(p_1, \\ldots,p_n)`  denote the probability thresholds that delineate the
@@ -381,7 +381,7 @@ def weights_from_warning_scaling(
     data array is designed to be used for the :py:func:`scores.categorical.risk_matrix_score` calculation.
 
     Comprehensive checks are made on ``scaling_matrix`` to ensure it satisfies the properties
-    of warning scaling in Table 1 of Taggart & Wilke (2025).
+    of warning scaling in Table 1 of Taggart and Wilke (2025).
 
     Args:
         scaling_matrix: a 2-dimensional matrix encoding the warning scaling. Warning levels
@@ -427,7 +427,7 @@ def weights_from_warning_scaling(
 
     Examples:
         Returns weights for each risk matrix decision point, for the SHORT-RANGE scaling matrix of
-        Taggart & Wilke (2025), with ESCALATION evaluation weights.
+        Taggart and Wilke (2025), with ESCALATION evaluation weights.
 
         >>> import numpy as np
         >>> from scores.categorical import weights_from_warning_scaling
@@ -501,7 +501,7 @@ def _scaling_to_weight_matrix(scaling_matrix, evaluation_weights):
     Given a scaling matrix and evaluation weights, outputs the weight matrix for the
     decision points of the corresponding risk matrix.
 
-    This is an implementation of the algorithm of Appendix B, Taggart & Wilke (2025).
+    This is an implementation of the algorithm of Appendix B, Taggart and Wilke (2025).
 
     Args:
         scaling_matrix: np.array of warning scaling values. Values must be integers.

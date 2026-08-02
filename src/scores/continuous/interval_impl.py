@@ -79,7 +79,7 @@ def quantile_interval_score(  # pylint: disable=R0914
         ValueError: If (fcst_lower_qtile > fcst_upper_qtile).any().
 
     References:
-        - Winkler, R. L. (1972). A Decision-Theoretic Approach to Interval Estimation. Journal of the American
+        - Winkler, R. L. (1972). A decision-theoretic approach to interval estimation. Journal of the American
           Statistical Association, 67(337), 187. https://doi.org/10.2307/2284720
 
     Examples:

@@ -54,7 +54,7 @@ It is divided into the following sections: [continuous](#continuous), [probabili
 * - Isotonic Regression (Isotonic Fit, Reliability Diagram)
   - [API](api.md#scores.continuous.isotonic_fit)
   - [Tutorial](project:./tutorials/Isotonic_Regression_And_Reliability_Diagrams.md)
-  - [de Leeuw et al. (2009)](https://doi.org/10.18637/jss.v032.i05); [Dimitriadis et al. (2020)](https://doi.org/10.1073/pnas.2016191118); [Jordan et al. (2020), version 2](https://doi.org/10.48550/arXiv.1904.04761)
+  - [de Leeuw et al. (2009)](https://doi.org/10.18637/jss.v032.i05); [Dimitriadis et al. (2021)](https://doi.org/10.1073/pnas.2016191118); [Jordan et al. (2020), version 2](https://doi.org/10.48550/arXiv.1904.04761)
 * - Kling–Gupta Efficiency (KGE)
   - [API](api.md#scores.continuous.kge)
   - [Tutorial](project:./tutorials/Kling_Gupta_Efficiency.md)
@@ -193,7 +193,7 @@ It is divided into the following sections: [continuous](#continuous), [probabili
 * - Brier Score for Ensembles
   - [API](api.md#scores.probability.brier_score_for_ensemble)
   - [Tutorial](project:./tutorials/Brier_Score.md)
-  - [Ferro (2013)](https://doi.org/10.1002/qj.2270)
+  - [Ferro (2014)](https://doi.org/10.1002/qj.2270)
 * - Continuous Ranked Probability Score (CRPS) for Cumulative Distribution Functions (CDFs)
   -
   -
@@ -249,7 +249,7 @@ It is divided into the following sections: [continuous](#continuous), [probabili
 * - Isotonic Regression (Isotonic Fit, Reliability Diagram)
   - [API](api.md#scores.probability.isotonic_fit)
   - [Tutorial](project:./tutorials/Isotonic_Regression_And_Reliability_Diagrams.md)
-  - [de Leeuw et al. (2009)](https://doi.org/10.18637/jss.v032.i05); [Dimitriadis et al. (2020)](https://doi.org/10.1073/pnas.2016191118); [Jordan et al. (2020), version 2](https://doi.org/10.48550/arXiv.1904.04761)
+  - [de Leeuw et al. (2009)](https://doi.org/10.18637/jss.v032.i05); [Dimitriadis et al. (2021)](https://doi.org/10.1073/pnas.2016191118); [Jordan et al. (2020), version 2](https://doi.org/10.48550/arXiv.1904.04761)
 * - Mean Elementary Score, *see Murphy Score*
   - &mdash;
   - &mdash;

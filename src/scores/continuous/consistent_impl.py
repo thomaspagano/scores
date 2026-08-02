@@ -26,7 +26,7 @@ def consistent_expectile_score(
     """
     Calculates the score using a scoring function that is consistent for the
     alpha-expectile functional, based on a supplied convex function phi.
-    See Geniting (2011), or Equation (10) from Taggart (2022).
+    See Gneiting (2011), or Equation (10) from Taggart (2022).
 
     .. math::
 

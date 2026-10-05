@@ -323,7 +323,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
         References:
             - Hogan, R. J., & Mason, I. B. (2011). Deterministic forecasts of binary events.
               In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification: A practitioner's guide in atmospheric
-              science (2nd ed., pp. 39–51). https://doi.org/10.1002/9781119960003.ch3
+              science (2nd ed., pp. 39–51). Wiley. https://doi.org/10.1002/9781119960003.ch3
 
         Examples:
             >>> import xarray as xr
@@ -375,7 +375,7 @@ class BasicContingencyManager:  # pylint: disable=too-many-public-methods
             - Hogan, R. J., & Mason, I. B. (2011). Deterministic forecasts of binary events.
               In I. T. Jolliffe & D. B. Stephenson (Eds.), Forecast verification:
               A practitioner's guide in atmospheric science (2nd ed.,
-              pp. 39–51). https://doi.org/10.1002/9781119960003.ch3
+              pp. 39–51). Wiley. https://doi.org/10.1002/9781119960003.ch3
 
         Examples:
             >>> import xarray as xr

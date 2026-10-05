@@ -131,8 +131,8 @@ def fss_2d(  # pylint: disable=too-many-locals,too-many-arguments
           limiting case and implications for aggregation. Monthly Weather Review, 149,
           3491–3504. https://doi.org/10.1175/mwr-d-18-0106.1
         - Roberts, N. M., & Lean, H. W. (2008). Scale-selective verification of rainfall accumulations
-          from high-resolution forecasts of convective events. Monthly Weather Review, 136(1), 78–97,
-          https://doi.org/10.1175/2007mwr2123.1.
+          from high-resolution forecasts of convective events. Monthly Weather Review, 136(1), 78–97.
+          https://doi.org/10.1175/2007mwr2123.1
 
     Examples:
         >>> import xarray as xr
@@ -372,8 +372,8 @@ def fss_2d_single_field(
           fractions skill score. MAUSAM, 66, 457–466. https://doi.org/10.54302/mausam.v66i3.555
         - https://en.wikipedia.org/wiki/Summed-area_table
         - Roberts, N. M., & Lean, H. W. (2008). Scale-selective verification of rainfall accumulations
-          from high-resolution forecasts of convective events. Monthly Weather Review, 136(1), 78–97,
-          https://doi.org/10.1175/2007mwr2123.1.
+          from high-resolution forecasts of convective events. Monthly Weather Review, 136(1), 78–97.
+          https://doi.org/10.1175/2007mwr2123.1
 
     Examples:
         >>> import numpy as np

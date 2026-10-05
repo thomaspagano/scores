@@ -124,7 +124,7 @@ It is divided into the following sections: [continuous](#continuous), [probabili
 * - Quantile-Quantile (QQ) Plots
   - [API](api.md#scores.continuous.qq)
   - [Tutorial](project:./tutorials/Q-Q_plots.md)
-  - [Déqué (2011)](https://doi.org/10.1002/9781119960003.ch5)
+  - [Déqué (2012)](https://doi.org/10.1002/9781119960003.ch5)
 * - Quantile Score, *see Quantile Loss*
   - &mdash;
   - &mdash;
@@ -342,7 +342,7 @@ It is divided into the following sections: [continuous](#continuous), [probabili
     - Base Rate
   - [API](api.md#scores.categorical.BasicContingencyManager.base_rate)
   - [Tutorial](project:./tutorials/Binary_Contingency_Scores.md)
-  - [Hogan and Mason (2011)](https://doi.org/10.1002/9781119960003.ch3)
+  - [Hogan and Mason (2012)](https://doi.org/10.1002/9781119960003.ch3)
 * -
     - Bias Score (Frequency Bias)
   - [API](api.md#scores.categorical.BasicContingencyManager.bias_score)
@@ -382,7 +382,7 @@ It is divided into the following sections: [continuous](#continuous), [probabili
     - Forecast Rate
   - [API](api.md#scores.categorical.BasicContingencyManager.forecast_rate)
   - [Tutorial](project:./tutorials/Binary_Contingency_Scores.md)
-  - [Hogan and Mason (2011)](https://doi.org/10.1002/9781119960003.ch3)
+  - [Hogan and Mason (2012)](https://doi.org/10.1002/9781119960003.ch3)
 * -
     - Fraction Correct (Accuracy)
   - [API](api.md#scores.categorical.BasicContingencyManager.fraction_correct)
@@ -749,7 +749,7 @@ It is divided into the following sections: [continuous](#continuous), [probabili
 * - Quantile-Quantile (QQ) Plots
   - [API](api.md#scores.plotdata.qq)
   - [Tutorial](project:./tutorials/Q-Q_plots.md)
-  - [Déqué (2011)](https://doi.org/10.1002/9781119960003.ch5)
+  - [Déqué (2012)](https://doi.org/10.1002/9781119960003.ch5)
 * - Rank Histogram
   - [API](api.md#scores.plotdata.rank_histogram)
   - [Tutorial](project:./tutorials/Rank_Histogram.md)

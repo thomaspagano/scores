@@ -387,7 +387,7 @@ def _hln_method_stat(diffs: np.ndarray, h: int) -> float:
     """
     Given a timeseries of score differences for h-step ahead forecasts, as a 1D numpy
     array without NaNs, returns the modified Diebold-Mariano test statistic of
-    Harvey et al (1997).
+    Harvey et al. (1997).
 
     If the value V_hat (see Equation (5) in Harvey) is nonpositive then NaN is returned.
 
@@ -415,7 +415,7 @@ def _hln_method_stat(diffs: np.ndarray, h: int) -> float:
 def _dm_gamma_hat_k(diffs: np.ndarray, diffs_bar: float, n: int, k: int) -> float:
     """
     Computes the quantity (n - k) * gamma_hat_star_k of Equation (5) in
-    Harvey et al (1997).
+    Harvey et al. (1997).
 
     Args:
         diffs: a single timeseries of score differences with NaNs removed.
@@ -433,7 +433,7 @@ def _dm_gamma_hat_k(diffs: np.ndarray, diffs_bar: float, n: int, k: int) -> floa
 
 def _dm_v_hat(diffs: np.ndarray, diffs_bar: float, n: int, h: int) -> float:
     """
-    Computes the the quantity V_hat(d_bar) of Equation (5) in Harvey et al (1997).
+    Computes the quantity V_hat(d_bar) of Equation (5) in Harvey et al. (1997).
 
     Args:
         diffs: a single timeseries of score differences with NaNs removed.
